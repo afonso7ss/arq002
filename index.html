@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Facade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input[type="text"] {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 8px 16px;
+            margin-right: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escola Facade</h1>
+
+    <label for="nomeDisciplina">Nome da Disciplina:</label>
+    <input type="text" id="nomeDisciplina">
+    <button onclick="adicionarDisciplina()">Adicionar Disciplina</button>
+    <hr>
+
+    <form id="alunoForm" onsubmit="return cadastrarAluno()">
+        <label for="nomeAluno">Nome do Aluno:</label>
+        <input type="text" id="nomeAluno" required>
+        <br>
+        <label for="disciplinasAluno">Selecione as disciplinas:</label>
+        <select id="disciplinasAluno" multiple size="5"></select>
+        <button type="submit">Cadastrar Aluno</button>
+    </form>
+
+    <hr>
+    <h2>Lista de Alunos:</h2>
+    <ul id="listaAlunos"></ul>
+
+    <script src="main.js"></script>
+</body>
+</html>
